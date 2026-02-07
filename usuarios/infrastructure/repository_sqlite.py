@@ -2,7 +2,7 @@ from domain.usuario_repository import UsuarioRepository
 from domain.usuario import Usuario
 from typing import List, Optional
 
-# Simulación en memoria (puede cambiarse por conexión SQLite real aquí mismo)
+
 db_memoria = []
 
 class SQLiteRepository(UsuarioRepository):
@@ -26,6 +26,6 @@ class SQLiteRepository(UsuarioRepository):
 
     def eliminar(self, id_usuario: int):
         global db_memoria
-        # Filtramos la lista para excluir el ID eliminado
         db_memoria = [u for u in db_memoria if u.id_usuario != id_usuario]
+
         return {"mensaje": "Usuario eliminado"}
