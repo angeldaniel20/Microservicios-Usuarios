@@ -28,4 +28,3 @@ def actualizar_usuario(id_usuario: int, nombre: str, email: str):
 def eliminar_usuario(id_usuario: int):
     return servicio.borrar_usuario(id_usuario)
 
-# Para correr: uvicorn infrastructure.api_fastapi:app --port 8001
